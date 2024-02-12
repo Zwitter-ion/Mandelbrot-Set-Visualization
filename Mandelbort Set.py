@@ -43,7 +43,7 @@ def graphe(xmin, xmax, ymin, ymax, width, height):
     return mset
 
 xmin, xmax, ymin, ymax = -2, 1,-1.5,1.5
-width,height = 100,100
+width,height = 1920*2,1080*2
 
 image = graphe(xmin,xmax,ymin,ymax,width,height)
 
