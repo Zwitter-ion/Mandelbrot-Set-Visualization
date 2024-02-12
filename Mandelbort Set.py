@@ -7,10 +7,6 @@ import matplotlib.pyplot as plt
 # Here 'Z' is the recursive function and 'C' is a random complex number
 
 class mandelbortSet():
-
-    def __init__(self) -> None:
-        pass
-
     def getComplex(realValue, imaginaryValue):
 
         complexNumber = np.complex64(realValue, imaginaryValue)
@@ -23,7 +19,7 @@ class mandelbortSet():
         for iter in range(maxIteration):
             if 2 > abs(Z) > -1.5:
                 Z = Z*Z + complexNumber
-                print(Z)
+                print(complexNumber,iter)
             else:
                 return iter
                      
@@ -35,7 +31,6 @@ def graphe(xmin, xmax, ymin, ymax, width, height):
     x = np.linspace(xmin, xmax, width)
     y = np.linspace(ymin, ymax, height)
     mset = np.zeros((height,width))
-
     for i in range(height):
         for j in range(width):
             mset[i,j] = mandelbortSet.mandelbortSet(complex(x[j], y[i]),100, 0)
